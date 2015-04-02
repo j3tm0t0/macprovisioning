@@ -18,6 +18,7 @@
       - { name: boot2docker }
       - { name: keychain }
     homebrew_cask_packages:
+      - { name: airserver }
       - { name: bettertouchtool }
       - { name: duet }
       - { name: iterm2 }
