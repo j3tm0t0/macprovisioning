@@ -14,12 +14,16 @@
       - { name: vim, install_options: with-lua,override-system-vi }
       - { name: git }
       - { name: ruby }
+      - { name: node }
       - { name: docker }
       - { name: boot2docker }
       - { name: keychain }
+      - { name: freeradius-server }
+      - { name: hadoop }
     homebrew_cask_packages:
       - { name: airserver }
       - { name: bettertouchtool }
+      - { name: coteditor }
       - { name: duet }
       - { name: iterm2 }
       - { name: firefox }
@@ -83,8 +87,12 @@
         creates: ~/Library/Fonts/Ricty-Bold.ttf
       notify: run fc-cache
 
+    - gem: name=pry state=latest
     - gem: name=rubocop state=latest
     - gem: name=aws-sdk state=latest
+
+    - npm: name=coffee-script global=yes
+    - npm: name=csfn global=yes
 
   handlers:
     - name: run fc-cache
