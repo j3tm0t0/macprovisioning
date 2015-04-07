@@ -19,7 +19,6 @@
       - { name: boot2docker }
       - { name: keychain }
       - { name: freeradius-server }
-      - { name: hadoop }
     homebrew_cask_packages:
       - { name: airserver }
       - { name: bettertouchtool }
